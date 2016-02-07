@@ -90,7 +90,7 @@ $(document).ready(function() {
     $traits.hide();
     $results.hide();
 
-    
+
 // var text = $text.val();
 //$('.output-div')[0].scrollIntoView(true); // Boolean arguments
 //$.post('/tone', {'text': text })
@@ -109,7 +109,26 @@ $(document).ready(function() {
 // scroll to bottom
 //$('.output-div')[0].scrollIntoView(true); // Boolean arguments
 //});
+ /* $('.analyze-btn').click(function(){
+    $('.analyze-btn').blur();
 
+ var text = $text.val();
+$('.output-div')[0].scrollIntoView(true); // Boolean arguments
+$.post('/tone', {'text': text })
+.done(function(response) {
+// save the json response in the JSON tab
+$jsonTab.html(JSON.stringify(response, null, 2));
+//prepare the data
+processData(response);
+response.id = 'root';
+CURRENT_TONE = response;
+doToneCheck(response, text);
+})
+.fail(onAPIError)
+.always (function(){
+$loading.hide();
+ scroll to bottom
+$('.output-div')[0].scrollIntoView(true); */
     $.ajax({
       headers:{
         'csrf-token': $('meta[name="ct"]').attr('content')
