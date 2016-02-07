@@ -28,12 +28,17 @@ require('./config/i18n')(app);
 // Bootstrap application settings
 require('./config/express')(app);
 
+//Testing unauthenticated requests -- doesnt work
+var dialog = watson.dialog({
+	version: 'v1',
+	use_unauthenticated: true
+});
 // Create the service wrapper
 var personalityInsights = watson.personality_insights({
   version: 'v2',
-  url: 'https://516fd4c4-0fab-4a3b-9c80-5da58f7ab80e-bluemix:08dab12a703a0b86a344bd4b9056543e9c57f16740e730ef4036bea5e69de29a@516fd4c4-0fab-4a3b-9c80-5da58f7ab80e-bluemix.cloudant.com',
-  username: '516fd4c4-0fab-4a3b-9c80-5da58f7ab80e-bluemix ',
-  password: '1bc40be9481ab43f30c9cc8633f2683c487a25c9d756305ac900ce3c407ec80d'
+//  url: '://gateway.watsonplatform.net/personality-insights/api',
+  username: '21ea701f-3ed0-4d2a-8465-c273b87fad80',
+  password: 'IhLjp7My1oxx'
 });
 
 app.get('/', function(req, res) {
