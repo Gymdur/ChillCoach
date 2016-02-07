@@ -1,0 +1,13 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: ChillCoach
+  host: ChillCoach
+  disk_quota: 1024M
+  services:
+  - Lazerz-cloudantNoSQLDB
+  - ChillCoach-personality_insights
+  - Tone Analyzer-pj
+  - Cloudant NoSQL DB-up
