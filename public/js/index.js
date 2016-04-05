@@ -80,7 +80,7 @@ $(document).ready(function() {
     showError(error ? (error.error || error): '');
   }
 
-  $analyzeBtn.click(function() {
+  $('#like').click(function() {
     $loading.show();
     $results.hide();
 

@@ -18,7 +18,7 @@
 
 var express    = require('express'),
   app          = express(),
-//  bluemix      = require('./config/bluemix'),
+ // bluemix      = require('./config/bluemix'),
   watson       = require('watson-developer-cloud'),
   extend       = require('util')._extend,
   i18n         = require('i18next');
@@ -56,12 +56,15 @@ app.post('/api/profile', function(req, res, next) {
       return res.json(profile);
   });
 });
-
-//Tonal Analysis service wrapper
+// render index page
+app.get('/', function(req, res) {
+  res.render('index');
+});
+Tonal Analysis service wrapper
 var toneAnalyzer = watson.tone_analyzer({
-        version: 'v2-experimental',
-        username: '78e3f870-ba0e-4e83-8179-1475870f82ad',
-        password: 'VBHyLZRedoXj'
+      version: 'v2-experimental',
+    username: '78e3f870-ba0e-4e83-8179-1475870f82ad',
+     password: 'VBHyLZRedoXj'
 
 });
 
